@@ -1,0 +1,21 @@
+{
+  "name": "collectible-card-game-daar",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:ghivert/touche-coule.git",
+  "author": "Guillaume Hivert <hivert.is.coming@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "postinstall": "yarn --cwd contracts install && yarn --cwd frontend install",
+    "dev": "concurrently -c \"blue.bold,red.bold\" --names \"ethereum,frontend\" \"yarn --cwd contracts dev\" \"yarn --cwd frontend dev\""
+  },
+  "devDependencies": {
+    "concurrently": "^7.5.0"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "ethers": "^5.7.2",
+    "express": "^4.18.2",
+    "http": "^0.0.1-security"
+  }
+}
